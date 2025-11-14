@@ -14,3 +14,6 @@
 - 将来的にユーザー投稿やレビュー機能の追加予定
 
 ---
+
+## サイトURL
+http://localhost:63342/Food_trip/index.html
