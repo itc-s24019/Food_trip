@@ -16,4 +16,4 @@
 ---
 
 ## サイトURL
-http://localhost:63342/Food_trip/index.html
+[http://localhost:63342/Food_trip/index.html](https://itc-s24019.github.io/Food_trip/)
