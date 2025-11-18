@@ -1,0 +1,436 @@
+/* リセットCSSとベース設定 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* 【修正なし】ベースのフォントサイズを16pxに変更 */
+  font-family: 'Zen Maru Gothic', sans-serif;
+  color: #333;
+  line-height: 1.7;
+  background-color: #f8f8f8;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: #cc5500; /* Food_tripのテーマカラー */
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-padding {
+  padding: 60px 0;
+}
+
+h3 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #cc5500;
+  font-weight: 700;
+}
+
+/* ---------------------------------- */
+/* ヘッダー */
+/* ---------------------------------- */
+header {
+  background-color: #fff;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+header h1 a {
+  font-size: 28px;
+  color: #cc5500;
+  font-weight: 700;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav li {
+  margin-left: 20px;
+}
+
+header nav a {
+  color: #333;
+  font-size: 14px;
+  padding: 5px 0;
+  border-bottom: 2px solid transparent;
+}
+
+header nav a:hover {
+  border-bottom: 2px solid #cc5500;
+}
+
+/* ---------------------------------- */
+/* メインビジュアル */
+/* ---------------------------------- */
+.main-visual {
+//  background: url('img/main_bg.jpg') no-repeat center center/cover;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.main-visual::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+.visual-content h2 {
+  font-size: 44px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  font-weight: 700;
+}
+
+.visual-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #cc5500;
+  color: white;
+  border-radius: 20px; /* 角丸を強調 */
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #e06600;
+}
+
+/* ---------------------------------- */
+/* 自己紹介セクション */
+/* ---------------------------------- */
+.bg-light {
+  background-color: #f0f0f0;
+}
+
+.about-block {
+  text-align: center;
+}
+
+/* 段落分けした自己紹介テキストの調整 */
+.introduction-text-area {
+  text-align: center;
+  font-size: 18px;
+  line-height: 2.0;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.introduction-text-area p {
+  margin-bottom: 25px; /* 段落ごとの空き */
+}
+
+/* ---------------------------------- */
+/* ブログ風：メインレイアウト (記事リストとサイドバー) */
+/* ---------------------------------- */
+.blog-main-and-sidebar {
+  display: flex;
+  gap: 40px;
+}
+
+.blog-main-content {
+  flex: 3;
+  /* 【追加/修正】記事の内容全体を中央に寄せるための幅設定 */
+  max-width: 900px; /* 画像の最大幅と同じに設定 */
+  margin: 0 auto; /* 中央寄せ */
+}
+
+.blog-sidebar {
+  flex: 1;
+}
+
+/* ---------------------------------- */
+/* ブログ風：記事一覧 (2列グリッド) */
+/* ---------------------------------- */
+.trip-list-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2列のグリッド */
+  gap: 30px;
+}
+
+.trip-card-small {
+  background-color: #fff;
+  border-radius: 12px; /* 角丸を強調 */
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.trip-card-small:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.trip-card-small img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.trip-card-small a {
+  display: block;
+  color: #333;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.card-content .excerpt {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.card-content .post-meta {
+  font-size: 12px;
+  color: #888;
+  padding-top: 5px;
+  border-top: 1px dashed #eee;
+}
+
+/* ---------------------------------- */
+/* ブログ風：サイドバー */
+/* ---------------------------------- */
+.sidebar-module {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-module h4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #cc5500;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
+.category-list ul {
+  list-style: none;
+}
+
+.category-list li a {
+  display: block;
+  padding: 5px 0;
+  color: #555;
+  border-bottom: 1px dotted #eee;
+}
+
+/* ---------------------------------- */
+/* ブログ風：個別記事内の見出し (詳細ページ用) */
+/* ---------------------------------- */
+
+/* H3: 記事内のセクションタイトル（HIS風帯デザイン） */
+.review-body h3, .basic-info h3 {
+  /* 【修正/追加】幅を制限して中央寄せにする */
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: left;
+  font-size: 24px;
+  border-left: 8px solid #cc5500;
+  padding-left: 15px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* H4: 記事内の小見出し */
+.review-body h4 {
+  /* 【修正/追加】幅を制限して中央寄せにする */
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+/* 記事本文内のテキスト調整 */
+.review-body p {
+  /* 【修正/追加】幅を制限して中央寄せにする */
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 1em;
+}
+
+/* 店舗情報のフォントサイズを大きくし、見やすく配置 */
+.basic-info dl {
+  /* 【修正/追加】幅を制限して中央寄せにする */
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+
+  margin-top: 20px;
+}
+.basic-info dt {
+  font-size: 17px; /* 項目名 */
+  font-weight: bold;
+  color: #cc5500;
+  margin-top: 10px;
+}
+.basic-info dd {
+  font-size: 17px; /* 内容 */
+  margin-bottom: 10px;
+  margin-left: 0; /* 左寄せに戻す */
+}
+
+
+.view-more {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ---------------------------------- */
+/* 詳細ページ用：トップに戻るボタン (追加分) */
+/* ---------------------------------- */
+.back-to-top {
+  text-align: center;
+  margin-top: 60px; /* 上部に大きな余白 */
+  padding-bottom: 20px;
+}
+
+/* トップページの「もっと見る」と詳細ページの「戻る」ボタンのスタイルを統一 */
+.back-to-top .btn, .view-more a {
+  font-size: 16px;
+  padding: 12px 40px;
+  border-radius: 25px;
+}
+
+/* ---------------------------------- */
+/* フッター */
+/* ---------------------------------- */
+footer {
+  background-color: #333;
+  color: #ccc;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* ---------------------------------- */
+/* レスポンシブ対応 */
+/* ---------------------------------- */
+@media (max-width: 992px) {
+  .blog-main-and-sidebar {
+    /* 【修正】サイドバーがある場合、メインコンテンツを左寄せに戻す */
+    .blog-main-content {
+      max-width: 100%;
+      margin: 0;
+    }
+    flex-direction: column; /* メインとサイドバーを縦に並べる */
+  }
+  .blog-main-content, .blog-sidebar {
+    flex: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .trip-list-grid {
+    grid-template-columns: 1fr; /* スマホでは1列表示 */
+  }
+  .main-visual h2 {
+    font-size: 32px;
+  }
+
+  /* 【修正】スマホ表示ではテキストの幅制限を解除 */
+  .review-body p, .review-body h3, .review-body h4, .basic-info dl {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* ---------------------------------- */
+/* 詳細ページ用：メイン画像（3枚横並びのスタイル） */
+/* ---------------------------------- */
+.main-image {
+  /* グリッドコンテナとして設定 */
+  display: grid;
+  /* 3つの均等な列を作成。中央寄せのため最大幅を設定 */
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 900px; /* 3枚まとめての最大幅 */
+  margin: 0 auto 30px auto; /* 中央寄せと下部の余白 */
+  gap: 15px; /* 画像間の隙間 */
+}
+
+.main-image img {
+  /* 各画像を親グリッドセルいっぱいに広げる */
+  width: 100%;
+  /* 縦横比を統一するために高さを広げた */
+  height: 250px;
+  object-fit: cover; /* 画像が欠けないように切り抜いて表示 */
+  /* 角丸で可愛らしく */
+  border-radius: 12px;
+  /* 影をつけて立体感を出す */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* モバイル対応（画面幅が狭い場合は縦に並べる） */
+@media (max-width: 600px) {
+  .main-image {
+    /* 1列に設定 */
+    grid-template-columns: 1fr;
+    max-width: 400px; /* モバイルでは少し大きめに表示 */
+  }
+  .main-image img {
+    /* 高さを少し調整 */
+    height: 250px;
+  }
+}
