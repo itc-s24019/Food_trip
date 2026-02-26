@@ -47,6 +47,26 @@
 ## 🔧 導入手順
 
 ### 1. リポジトリのクローン
+
 ```bash
-git clone [https://github.com/itc-ss24007/school-attendance-system.git](https://github.com/itc-ss24007/school-attendance-system.git)
+git clone https://github.com/itc-ss24007/school-attendance-system.git
 cd school-attendance-system
+```
+
+---
+
+## 💻 画面イメージ
+
+## ① ホーム画面上部
+<img width="1898" height="871" alt="Screenshot from 2026-02-26 12-20-29" src="https://github.com/user-attachments/assets/2433cae4-f4c6-46a7-8641-491549cce09d" />
+
+## ② ホーム画面下部
+<img width="1920" height="1080" alt="Screenshot from 2026-02-26 11-53-53" src="https://github.com/user-attachments/assets/467c56bd-0847-4281-aae3-551b61f6c38d" />
+
+## ➂ 詳細ページ上部
+<img width="1898" height="871" alt="Screenshot from 2026-02-26 12-24-39" src="https://github.com/user-attachments/assets/335d756e-a3c4-4dd4-a3f4-fb268ecabb30" />
+
+## ④ 詳細ページ下部
+<img width="1898" height="759" alt="Screenshot from 2026-02-26 12-25-03" src="https://github.com/user-attachments/assets/5b885929-1c92-4a96-8614-776d2540ce50" />
+
+
